@@ -5,7 +5,7 @@ contract ERC20Burn is ERC20 ,ERC20Burnable{
     constructor () ERC20("monesh","ms"){
 
     }
-
+    
     function mint(address to, uint256 amount) public  {
         _mint(to, amount);
     } 
