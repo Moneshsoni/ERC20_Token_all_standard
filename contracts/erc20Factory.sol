@@ -7,14 +7,18 @@ contract ERC20Factory{
         string calldata name,
         string calldata symbol,
         uint8 decimals,
-        uint256 initialSupply
+        uint256 initialSupply,
+        uint startTime,
+        uint endTime
     ) external returns (myERC20 creditsAddress) {
 
         myERC20 newCredits = new myERC20(
             name,
             symbol,
             decimals,
-            initialSupply
+            initialSupply,
+            startTime,
+            endTime
         );
 
         tokenAddress.push(address(newCredits));
